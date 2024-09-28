@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Змейка</title>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="400" style="border: 1px solid black;"></canvas>
+    <label for="snakeSize">Размер змейки:</label>
+    <span id="snakeSize">1</span>
+    <script type="module" src="index.js"></script>
+    <div id="gameOverMessage" style="display: none;">
+        Игра окончена!
+        <button id="restartButton">Начать заново</button>
+    </div>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
